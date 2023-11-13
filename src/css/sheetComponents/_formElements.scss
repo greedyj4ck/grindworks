@@ -1,0 +1,14 @@
+.input-creator {
+  input {
+    font-family: $font-text-clasic-family;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+  }
+
+  .q-field__label {
+    font-family: $font-headers-modern-family;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+}

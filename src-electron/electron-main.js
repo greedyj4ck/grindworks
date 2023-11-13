@@ -1,0 +1,82 @@
+import { app, BrowserWindow, nativeTheme } from "electron";
+import { initialize, enable } from "@electron/remote/main"; //electron-remote functionality
+
+import path from "path";
+import os from "os";
+
+// needed in case process is undefined under Linux
+const platform = process.platform || os.platform();
+
+app.commandLine.appendSwitch("--ignore-gpu-blocklist");
+app.commandLine.appendSwitch("--enable-gpu-rasterization");
+app.commandLine.appendSwitch("--enable-zero-copy");
+app.commandLine.appendSwitch("--disable-gpu-driver-bug-workarounds");
+app.commandLine.appendSwitch("--enable-accelerated-video-decode");
+
+// ELECTRON-REMOTE INITIALIZE
+initialize();
+
+// SETTINGS HANDLING
+
+try {
+  if (platform === "win32" && nativeTheme.shouldUseDarkColors === true) {
+    require("fs").unlinkSync(
+      path.join(app.getPath("userData"), "DevTools Extensions"),
+    );
+  }
+} catch (_) {}
+
+let mainWindow;
+
+function createWindow() {
+  /**
+   * Initial window options
+   */
+  mainWindow = new BrowserWindow({
+    icon: path.resolve(__dirname, "icons/icon.png"), // tray icon
+    minWidth: 1300,
+    minHeight: 700,
+    width: 1000,
+    height: 600,
+    frame: false,
+    useContentSize: true,
+    webPreferences: {
+      sandbox: false,
+      contextIsolation: true,
+      // More info: https://v2.quasar.dev/quasar-cli-vite/developing-electron-apps/electron-preload-script
+      preload: path.resolve(__dirname, process.env.QUASAR_ELECTRON_PRELOAD),
+    },
+  });
+
+  enable(mainWindow.webContents); // <-- add this
+
+  mainWindow.loadURL(process.env.APP_URL);
+
+  if (process.env.DEBUGGING) {
+    // if on DEV or Production with debug enabled
+    mainWindow.webContents.openDevTools();
+  } else {
+    // we're on production; no access to devtools pls
+    mainWindow.webContents.on("devtools-opened", () => {
+      mainWindow.webContents.closeDevTools();
+    });
+  }
+
+  mainWindow.on("closed", () => {
+    mainWindow = null;
+  });
+}
+
+app.whenReady().then(createWindow);
+
+app.on("window-all-closed", () => {
+  if (platform !== "darwin") {
+    app.quit();
+  }
+});
+
+app.on("activate", () => {
+  if (mainWindow === null) {
+    createWindow();
+  }
+});

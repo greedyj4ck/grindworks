@@ -1,0 +1,60 @@
+html,
+body {
+  background-color: transparent;
+}
+
+$background-transparent-dark: rgba(0, 0, 0, 0.4);
+
+.q-drawer--left {
+  background: none;
+}
+
+.tool-drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid $deg-gold;
+
+  box-shadow: rgba(0, 0, 0, 0.7) 10px 0px 20px 0px;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(55, 55, 55, 0.2) 100%
+  );
+
+  .tool-drawer-navitem {
+    width: 100%;
+
+    .navitem-icon img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+.deg-header-main {
+  background-color: $background-transparent-dark;
+  border-bottom: 1px solid $deg-gold !important;
+}
+.navitem-tooltip {
+  background-color: $bg-glass-dark-01;
+  border: 1px solid $bg-glass-dark-01;
+  backdrop-filter: blur(10px);
+
+  .navitem-title {
+    font-family: $font-headers-family;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $secondary;
+  }
+
+  .navitem-caption {
+    font-family: $font-text-family;
+    font-weight: 300;
+    font-size: 14px;
+    color: $primary;
+  }
+}

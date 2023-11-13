@@ -1,0 +1,81 @@
+.navitem-tooltip {
+  background-color: $bg-glass-dark-01;
+  border: 1px solid $bg-glass-dark-01;
+  backdrop-filter: blur(10px);
+
+  .navitem-title {
+    font-family: $font-headers-family;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $secondary;
+  }
+
+  .navitem-caption {
+    font-family: $font-text-family;
+    font-weight: 300;
+    font-size: 14px;
+    color: $primary;
+  }
+}
+
+.tooltip-attr {
+  width: 300px;
+  background-color: $bg-glass-dark-01;
+  border: 1px solid $bg-glass-dark-01;
+  backdrop-filter: blur(10px);
+
+  .label {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    font-family: $font-headers-modern-family;
+    text-transform: uppercase;
+  }
+
+  .desc {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: justify;
+    font-family: $font-text-clasic-family;
+  }
+}
+
+.tooltip-skill {
+  width: 500px;
+  background-color: $bg-glass-dark-01;
+  border: 1px solid $bg-glass-dark-01;
+  backdrop-filter: blur(10px);
+
+  .label {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    font-family: $font-headers-modern-family;
+    text-transform: uppercase;
+  }
+
+  .section-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: $deg-red;
+    letter-spacing: 0.15em;
+    font-family: $font-headers-modern-family;
+    text-transform: uppercase;
+  }
+
+  .section-value {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: justify;
+    font-family: $font-text-clasic-family;
+  }
+
+  .desc {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: justify;
+    font-family: $font-text-clasic-family;
+  }
+}

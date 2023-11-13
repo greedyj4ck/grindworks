@@ -1,0 +1,17 @@
+.page-creator {
+  background:
+    radial-gradient(circle, rgba(10, 10, 10, 0.6) 0%, rgba(0, 0, 0, 1) 100%),
+    repeat url("/src/assets/backgrounds/noise.webp");
+  background-repeat: repeat;
+  margin-bottom: 20px;
+
+  .container {
+    position: relative;
+    left: 80px;
+    width: calc(100% - 80px);
+  }
+
+  .card-glass {
+    background-color: $bg-glass-dark-01;
+  }
+}

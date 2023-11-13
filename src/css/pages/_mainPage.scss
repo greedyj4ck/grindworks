@@ -1,0 +1,56 @@
+body {
+  overflow: hidden;
+}
+
+.page-start {
+  background:
+    radial-gradient(circle, rgba(25, 25, 25, 0.4) 0%, rgba(0, 0, 0, 1) 100%),
+    repeat url("/src/assets/backgrounds/noise.webp"),
+    center / cover url("/src/assets/backgrounds/hexagon.jpg");
+  transform: scale(1);
+  background-blend-mode: soft-light, multiply;
+  background-position: 0% 0%;
+  align-items: stretch;
+
+  .app-logo {
+    width: 250px;
+    mix-blend-mode: screen;
+    user-select: none;
+  }
+
+  .px-container {
+    width: 100%;
+
+    display: flex;
+
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
+
+@keyframes animateBg {
+  from {
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1) translateZ(1px);
+  }
+
+  to {
+    -ms-transform: scale(1.45, 1.45);
+    transform: scale(1.45, 1.45) translateZ(1px);
+  }
+}
+
+.animate-bg {
+  -webkit-animation-name: animateBg;
+  animation-name: animateBg;
+}
+.animate {
+  -webkit-animation-duration: 5000ms;
+  animation-duration: 5000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  animation-iteration-count: infinite;
+}

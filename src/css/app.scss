@@ -1,0 +1,22 @@
+// DEGENESIS CHARACTER APP (SCSS V.01)
+// MAIN FILES
+
+@import "utilities";
+@import "typography/typography";
+
+// THEMING
+// WINDOW COMPONENTS
+@import "windowComponents/windowBar";
+@import "windowComponents/fsLoader";
+
+// LAYOUTS COMPONENTS
+@import "layouts/layoutMain";
+
+// PER PAGES STYLES
+@import "pages/mainPage";
+@import "pages/creatorPage";
+
+@import "sheetComponents/formElements";
+@import "sheetComponents/tooltips";
+@import "sheetComponents/attrBar";
+@import "sheetComponents/skillBar";

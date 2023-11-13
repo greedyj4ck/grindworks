@@ -1,0 +1,74 @@
+.deg-window-bar {
+  height: 40px;
+
+  color: $deg-gold;
+  background-color: #000;
+
+  .close-btn {
+    .q-focus-helper {
+      display: none;
+    }
+    font-size: 8px;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("/src/assets/windowComponents/bar-icon.svg");
+
+    &:hover {
+      background-image: url("/src/assets/windowComponents/close-icon.svg");
+      -webkit-transition: background 0.5s;
+      -moz-transition: background 0.5s;
+      -o-transition: background 0.5s;
+      transition: background 0.5s;
+    }
+  }
+
+  .maximize-btn {
+    .q-focus-helper {
+      display: none;
+    }
+    font-size: 8px;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("/src/assets/windowComponents/bar-icon.svg");
+
+    &:hover {
+      background-image: url("/src/assets/windowComponents/maximize-icon.svg");
+      -webkit-transition: background 0.5s;
+      -moz-transition: background 0.5s;
+      -o-transition: background 0.5s;
+      transition: background 0.5s;
+    }
+  }
+  .minimize-btn {
+    .q-focus-helper {
+      display: none;
+    }
+    font-size: 8px;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("/src/assets/windowComponents/bar-icon.svg");
+
+    &:hover {
+      background-image: url("/src/assets/windowComponents/minimize-icon.svg");
+      -webkit-transition: background 0.5s;
+      -moz-transition: background 0.5s;
+      -o-transition: background 0.5s;
+      transition: background 0.5s;
+    }
+  }
+}
+
+.q-card-glass {
+  user-select: none;
+  background-color: $bg-glass-dark-01;
+  border-color: $deg-gold;
+  transition: backdrop-filter 2s;
+  backdrop-filter: blur(20px);
+
+  .btn-glass {
+    backdrop-filter: blur(20px);
+  }
+}

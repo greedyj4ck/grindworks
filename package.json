@@ -1,0 +1,47 @@
+{
+  "name": "degenesis-character",
+  "version": "0.0.1",
+  "description": "Degenesis RPG character generator / database",
+  "productName": "Static Stream",
+  "author": "greedyj4ck <s_szczesny@outlook.com>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ./",
+    "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev -m electron --devtools "
+  },
+  "dependencies": {
+    "@animxyz/vue3": "^0.6.7",
+    "@electron/remote": "^2.1.0",
+    "@fontsource-variable/crimson-pro": "^5.0.16",
+    "@fontsource-variable/montserrat": "^5.0.16",
+    "@quasar/extras": "^1.16.8",
+    "better-sqlite3": "^9.1.1",
+    "electron-store": "^8.1.0",
+    "pinia": "^2.1.7",
+    "quasar": "^2.13.1",
+    "sequelize": "^6.34.0",
+    "vue": "^3.3.8",
+    "vue-i18n": "^9.6.5",
+    "vue-responsive-video-background-player": "^2.3.1",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^6.0.3",
+    "@quasar/app-vite": "^1.6.2",
+    "@vue/devtools": "^6.5.1",
+    "autoprefixer": "^10.4.16",
+    "electron": "^27.0.4",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-vue": "^9.18.1",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

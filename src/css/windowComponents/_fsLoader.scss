@@ -1,0 +1,16 @@
+.fs-loader {
+  position: absolute;
+  top: 41px;
+  left: 0px;
+  width: 100%;
+  background-color: white;
+  height: calc(100% - 41px);
+  z-index: 99999;
+}
+
+.fs-loader-icon {
+  width: 200px;
+  height: 200px;
+  user-select: none;
+  --xyz-rotate-y: 180deg;
+}
